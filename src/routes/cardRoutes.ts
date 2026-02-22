@@ -6,3 +6,5 @@ const router= Router();
 const cardController = new CardController();
 
 router.get("/cards", authenticationMiddleware, cardController.cards.bind(cardController));
+
+export default router;
