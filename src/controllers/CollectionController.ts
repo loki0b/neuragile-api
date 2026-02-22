@@ -58,7 +58,7 @@ class CollectionController {
                 }
             });
 
-            if (existingItem == null) return res.status(400).json({ status: 'This item is already in this collection.' });
+            if (existingItem != null) return res.status(400).json({ status: 'This item is already in this collection.' });
 
             const item = await prisma.collectionItem.create({
                 data: {
