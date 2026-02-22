@@ -33,7 +33,8 @@
       "@controllers/*": ["./src/controllers/*"],
       "@routes/*": ["./src/routes/*"],
       "@database/*": ["./src/database/*"],
-      "@authentication/*": ["./src/auth/*"]
+      "@authentication/*": ["./src/auth/*"],
+      "@middlewares/*": ["./src/middlewares/*"]
     },
   },
   
