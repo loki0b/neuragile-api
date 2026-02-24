@@ -43,15 +43,9 @@ class UserController {
                 { expiresIn: "1h"}
             );
 
-            const cookieOptions: CookieOptions = {
-                httpOnly: true,
-                secure: process.env.NODE_ENV === "production",
-                maxAge: 60 * 60 * 1000, // 1h in ms
-                sameSite: "strict"
-            };
-
-            return res.status(200).cookie("auth_token", userToken, cookieOptions).json({
-                status: "Login successfully"
+            return res.status(200).json({
+                status: "Login successfully",
+                token: userToken
             });
         } catch (err) {
             console.log(err);
