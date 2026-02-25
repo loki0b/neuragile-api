@@ -2,7 +2,7 @@ name: Build e Push Dev
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "test" ]
 
 jobs:
   build-dev:
@@ -27,4 +27,4 @@ jobs:
         with:
             context: .
             push: true
-            tags: ghcr.io/${{ github.repository_owner }}/backend:dev
+            tags: ghcr.io/${{ github.repository_owner }}/backend:test
