@@ -6,6 +6,10 @@ COPY package*.json /app
 
 RUN npm install
 
+COPY prisma ./prisma/
+
+RUN npx prisma generate
+
 COPY . /app
 
 EXPOSE 8080
