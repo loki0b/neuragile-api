@@ -12,9 +12,9 @@ const port: string | number = process.env["PORT"] || 8080;
 
 app.use(json());
 app.use(cookieParser());
-app.use("/api/user/", userRoutes);
+app.use("/api/user", userRoutes);
 app.use("/api/cards", cardRoutes);
-app.use("api/collections", collectionRoutes);
+app.use("/api/collections", collectionRoutes);
 
 app.listen(port, () => {
     console.log(`Service running: http://localhost:${port}/`)
