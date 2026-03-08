@@ -1,8 +1,8 @@
 import express, { json } from "express";
 import cookieParser from "cookie-parser";
-import userRoutes from "@routes/userRoutes"
-import cardRoutes from "@routes/cardRoutes";
-import collectionRoutes from "@routes/collectionRoutes";
+import userRoutes from "./routes/userRoutes.js";
+import cardRoutes from "./routes/cardRoutes.js";
+import collectionRoutes from "./routes/collectionRoutes.js";
 
 import type { Express } from "express";
 

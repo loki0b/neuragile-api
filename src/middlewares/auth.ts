@@ -1,4 +1,4 @@
-import { verifyToken } from "@authentication/session";
+import { verifyToken } from "../auth/session.js";
 
 import type { Request, Response, NextFunction } from "express";
 

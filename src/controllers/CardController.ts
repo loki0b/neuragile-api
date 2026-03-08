@@ -1,4 +1,4 @@
-import { prisma } from "@database/prisma";
+import { prisma } from "../database/prisma.js";
 
 class CardController {
     async cards(req: any, res: any, next: any) {

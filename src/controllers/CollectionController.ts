@@ -1,4 +1,4 @@
-import { prisma } from "@database/prisma";
+import { prisma } from "../database/prisma.js";
 
 class CollectionController {
     async getAllCollections(req: any, res: any) {
@@ -83,7 +83,7 @@ class CollectionController {
                 select: { id: true }
             });
 
-            const collectionsIds = userCollections.map(c => c.id);
+            const collectionsIds = userCollections.map((c: { id: number }) => c.id);
             const items = await prisma.collectionItem.findMany({
                 where: {
                     collectionId: { in: collectionsIds }

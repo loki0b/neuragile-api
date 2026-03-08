@@ -1,6 +1,6 @@
 import { hash, compare } from "bcrypt";
-import { prisma } from "@database/prisma";
-import { createToken, verifyToken } from "@authentication/session";
+import { prisma } from "../database/prisma.js";
+import { createToken, verifyToken } from "../auth/session.js";
 
 import type { Request, Response, NextFunction, CookieOptions } from "express";
 
