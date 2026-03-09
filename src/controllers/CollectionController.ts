@@ -49,7 +49,7 @@ class CollectionController {
 
             if (collection == null) return res.status(403).json({ status: "Forbidden: Not your collection" });
     
-            const existingItem = prisma.collectionItem.findUnique({
+            const existingItem = await prisma.collectionItem.findUnique({
                 where: {
                     collectionId_cardId: {
                         collectionId,
