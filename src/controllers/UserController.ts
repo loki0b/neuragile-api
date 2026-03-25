@@ -19,9 +19,8 @@ class UserController {
             if (userExists === null) return res.status(409).json({status: "The user already exists"})
 
             const hashedPassword: string = await hash(password, SALT_ROUNDS);
-            const user = await prisma.user.create({
-                data: { email, password: hashedPassword },
-                select: { id: true, email: true }
+            await prisma.user.create({
+                data: { email: email, password: hashedPassword },
             });
 
             return res.status(201).json({ status: "Account successfully created"});
