@@ -1,8 +1,8 @@
 import { hash, compare } from "bcrypt";
-import { prisma } from "../lib/PrismaClient.js";
-import { createToken, verifyToken } from "../auth/session.js";
+import { prisma } from "src/lib/PrismaClient.js";
+import { createToken } from "src/auth/session.js";
 
-import type { Request, Response, NextFunction, CookieOptions } from "express";
+import type { Request, Response, NextFunction } from "express";
 
 const SALT_ROUNDS: number = 10;
 
